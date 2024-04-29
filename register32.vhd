@@ -1,0 +1,26 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+USE IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+ENTITY register32 IS
+PORT(
+	d	:	IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+	ld	:	IN STD_LOGIC;
+	clr:	IN STD_LOGIC;
+	clk:	IN STD_LOGIC;
+	Q	:	OUT STD_LOGIC_VECTOR(31 DOWNTO 0)
+	);
+END register32;
+
+ARCHITECTURE Behavior OF register32 IS 
+BEGIN
+	PROCESS (ld, clr, clk)
+	BEGIN 
+		IF clr = '1' THEN
+			Q <= (OTHERS => '0');
+		ELSIF((clk'EVENT AND clk = '1') AND (ld = '1')) THEN	
+			Q <= d;
+		END IF;
+	END PROCESS;
+END Behavior;
