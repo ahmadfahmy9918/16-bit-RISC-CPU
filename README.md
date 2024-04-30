@@ -1,8 +1,9 @@
 # 16-bit-RISC-CPU
 ## **Abstract**
+This document presents the development and operational testing of a 16-bit RISC CPU with a Harvard-based microarchitecture, featuring a 32-bit external data bus, 16-bit instruction bus, and an 8-bit data memory bus. The design includes 256B of instruction memory and a 1KB custom data memory, supported by two 32-bit working registers. Employing a multi-cycle instruction set optimized for Load/Store operations, the CPU effectively handles direct addressing and complex data manipulations. Extensive validation through waveform analysis confirms the CPU’s high reliability and performance, making it well-suited for educational and developmental applications in computer systems.
 
 ## **Introduction**
-
+The development of the 16-bit RISC CPU showcases a Harvard-based microarchitecture that optimizes the separation of data and instruction handling for enhanced processing efficiency. With a 32-bit external data bus, 16-bit instruction bus, and an 8-bit data memory bus, the design supports substantial operational flexibility. Key features include 256B of instruction memory and a 1KB custom data memory, alongside two 32-bit working registers, A and B, that facilitate complex data computations. This setup employs a multi-cycle instruction process with a streamlined instruction set, balancing simplicity with robust functionality. This introduction previews the detailed exploration of the CPU's architecture, register configuration, and execution processes described in the following sections.
 
 ## **Specifications**
  The outlined design features were as follows:
